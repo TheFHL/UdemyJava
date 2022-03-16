@@ -39,13 +39,12 @@ public class App {
                 continue;
             }
 
-            evenNumbersFound++;
-            
+            System.out.println("Even number : " + number);
+
+            evenNumbersFound++;            
             if(evenNumbersFound == 5){
                 break;
-            }
-            
-            System.out.println("Even number : " + number);
+            }    
         }
 
         System.out.println("Total even numbers found = " + evenNumbersFound);
