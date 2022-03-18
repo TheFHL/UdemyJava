@@ -4,7 +4,24 @@ public class App {
         System.out.println(canPack(1, 0, 4));
         System.out.println(canPack(2, 2, 11));
         System.out.println(canPack(-2, 2, 11));
+        System.out.println("-----------------------------------------");
+        System.out.println(getLargestPrime(21));
         
+    }
+
+    public static int getLargestPrime(int number){
+
+        if(number < 2){
+            return -1;
+        }
+
+        for(int i = 2; i < number; i++){
+            if(number % i == 0){
+                number /=i;
+                i--;
+            }
+        }
+        return number;
     }
 
     public static boolean canPack(int bigCount, int smallCount, int goal){
