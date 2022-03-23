@@ -7,7 +7,13 @@ public class Car {
     private String colour;
     
     public void setModel(String model){
-        this.model = model;
+        String validModel = model.toLowerCase();
+
+        if(validModel.equals("911") || validModel.equals("charger")){
+            this.model = model;
+        } else {
+            this.model = "Unknown";
+        }    
     }
 
     public String getModel(){
